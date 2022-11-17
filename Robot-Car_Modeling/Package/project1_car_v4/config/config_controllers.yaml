@@ -1,0 +1,28 @@
+# Robot name goes here
+project1_car_v4: 
+  # default controller
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Controller 1
+  right_drive_wheel_ctrl: 
+    type: velocity_controllers/JointVelocityController 
+    joint: right_drive_wheel_joint
+
+  # Controller 2
+  left_drive_wheel_ctrl: 
+    type: velocity_controllers/JointVelocityController 
+    joint: left_drive_wheel_joint
+
+  # Controller 3
+  right_steering_ctrl: 
+    type: effort_controllers/JointPositionController 
+    joint: right_steering_joint
+    pid : {p: 75.0 , i: 0.1 , d: 3.0} 
+
+  # Controller 4
+  left_steering_ctrl: 
+    type: effort_controllers/JointPositionController 
+    joint: left_steering_joint
+    pid : {p: 75.0 , i: 0.1 , d: 3.0} 

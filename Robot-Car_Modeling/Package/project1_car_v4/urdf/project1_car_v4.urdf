@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="project1_car_v4">
+  <link 
+    name = "dummy_link">
+  </link>
+  <joint 
+    name = "dummy_joint" type="fixed">
+    <parent
+      link="dummy_link" />
+    <child
+      link="base_link" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0168034157007119 -2.97545315225082E-07 0.33822007318947"
+        rpy="0 0 0" />
+      <mass
+        value="110.079916239358" />
+      <inertia
+        ixx="2.91066349346096"
+        ixy="8.21202892497876E-06"
+        ixz="-0.38120552402966"
+        iyy="8.11958261244321"
+        iyz="1.22514933980838E-05"
+        izz="9.61969422394006" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_drive_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 -9.43689570931383E-16 0.0380999999999999"
+        rpy="0 0 0" />
+      <mass
+        value="1.75240248504678" />
+      <inertia
+        ixx="0.00570047723376501"
+        ixy="5.16160702233089E-18"
+        ixz="-2.08772445674461E-20"
+        iyy="0.00570047723376501"
+        iyz="8.25716502868809E-18"
+        izz="0.00977063549749721" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/right_drive_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/right_drive_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_drive_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.253999999999996 -0.165099999999998 0.101600000000001"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_drive_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left_drive_wheel_link">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-16 6.38378239159465E-16 -0.0381000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="1.75240248504678" />
+      <inertia
+        ixx="0.00570047723376502"
+        ixy="1.41199730562802E-18"
+        ixz="5.32989691795481E-18"
+        iyy="0.00570047723376501"
+        iyz="6.38314599191858E-18"
+        izz="0.00977063549749721" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/left_drive_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/left_drive_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_drive_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.253999999999996 0.165099999999997 0.101599999999999"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_drive_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_steering_link">
+    <inertial>
+      <origin
+        xyz="5.27355936696949E-15 8.32667268468867E-17 -0.142377575703689"
+        rpy="0 0 0" />
+      <mass
+        value="1.29524534065669" />
+      <inertia
+        ixx="0.00761187080773897"
+        ixy="-3.20159068021187E-07"
+        ixz="1.22593500715696E-16"
+        iyy="0.00832491204385649"
+        iyz="-6.19619250157339E-19"
+        izz="0.00527306173535413" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/right_steering_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/right_steering_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_steering_joint"
+    type="revolute">
+    <origin
+      xyz="0.254 -0.127 0.3175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_steering_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="1000" />
+  </joint>
+  <link
+    name="front_right_wheel_link">
+    <inertial>
+      <origin
+        xyz="1.7177469301799E-05 -7.49400541621981E-16 0.0380999961277496"
+        rpy="0 0 0" />
+      <mass
+        value="1.75240248504678" />
+      <inertia
+        ixx="0.00570047806109679"
+        ixy="-2.91167575618667E-19"
+        ixz="1.83503967244328E-06"
+        iyy="0.00570047723376502"
+        iyz="6.33684972700976E-18"
+        izz="0.00977063467016543" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/front_right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/front_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="1.7177E-05 -0.0381 -0.2159"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="right_steering_link" />
+    <child
+      link="front_right_wheel_link" />
+    <axis
+      xyz="-0.00045085 0 -1" />
+  </joint>
+  <link
+    name="left_steering_link">
+    <inertial>
+      <origin
+        xyz="1.13242748511766E-14 -2.77555756156289E-17 -0.142377575703689"
+        rpy="0 0 0" />
+      <mass
+        value="1.29524534065669" />
+      <inertia
+        ixx="0.00761187077077747"
+        ixy="-2.75947004352568E-07"
+        ixz="1.59649811826322E-16"
+        iyy="0.008324912080818"
+        iyz="7.2748852426765E-19"
+        izz="0.00527306173535413" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/left_steering_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/left_steering_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_steering_joint"
+    type="revolute">
+    <origin
+      xyz="0.254 0.127 0.3175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_steering_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="1000"
+      velocity="1000" />
+  </joint>
+  <link
+    name="front_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-1.48150822438242E-05 -9.43689570931383E-16 -0.0380999971195974"
+        rpy="0 0 0" />
+      <mass
+        value="1.75240248504678" />
+      <inertia
+        ixx="0.005700477849182"
+        ixy="-5.26748614073768E-18"
+        ixz="1.58266994393168E-06"
+        iyy="0.00570047723376501"
+        iyz="-9.11693267996659E-18"
+        izz="0.00977063488208022" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/front_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://project1_car_v4/meshes/front_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-1.48150822311677E-05 0.0380999971195976 -0.215899999999999"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="left_steering_link" />
+    <child
+      link="front_left_wheel_link" />
+    <axis
+      xyz="0.000388847302987512 0 0.999999924398885" />
+  </joint>
+  <transmission name="right_drive_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_drive_wheel_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_drive_wheel_actuator">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="left_drive_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_drive_wheel_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_drive_wheel_actuator">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="right_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_steering_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="right_steering_actuator">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="left_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_steering_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="left_steering_actuator">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+</robot>
